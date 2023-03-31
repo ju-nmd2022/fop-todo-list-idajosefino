@@ -1,16 +1,13 @@
-// function onLoadHandler() {
-//     loadData();
-//     const headlineElement = document.querySelector("h1");
-//     console.log(headlineElement);
-
-//     const footerElement = document.getElementById("footer");
-// }
-
-// window.addEventListener("load", onLoadHandler);
-
 let addToDoButton = document.getElementById('addToDo');
 let toDoContainer = document.getElementById('toDoContainer');
 let inputField = document.getElementById('inputField');
+
+function loadHandler() {
+    loadData();
+    const headlineElement = document.querySelector("h1");
+    const footerElement = document.getElementById("footer");
+}
+window.addEventListener("load", loadHandler);
 
 addToDoButton.addEventListener('click', function(){
     var paragraph = document.createElement('p')
