@@ -1,16 +1,31 @@
 * {
-    background-color: #F4EEEE;
     font-family: sans-serif;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
+.body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
 .headline {
     color: #905641;
     margin: auto;
     top: 70px;
-    padding: 20px 19px;
+    padding: 20px 20px;
+    font-size: 28px;
+}
+
+.wrapper {
+    max-width: 600px;
+    padding: 28px 0 30px;
+    margin: 137px auto;
+    background: #F4EEEE;
+    border-radius: 7px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .text {
@@ -18,35 +33,38 @@
     font-family: 'Courier New', Courier, monospace;
     margin: auto;
     left: 20px;
-    padding: 5px 20px;
+    padding: 4px 22px;
     font-size: 14px;
-
 }
 
-.container {
-   width: 500px;
-}
-
-#inputField {
+.task-input {
+    height: 52px;
+    padding: 0 25px;
     position: relative;
-    left: 20px;
-    margin-top: 20px;
-    padding: 20px 20px;
-    width: 83%;
-    height: 45px;
-    background: #fff;
-    font-size: 15px;
+}
+
+.task-input input{
+    height: 100%;
+    width: 100%;
     border: 1px solid #fff;
-    outline: none;
-    font-size: 15px;
     font-weight: 500;
+    margin-top: 20px;
+    outline: none;
+    font-size: 14px;
+    padding: 0 20px 0 20px;
+}
+
+.task-input input:focus,
+.task-input input.active{
+  border: 1px solid #905641;
 }
 
 #addToDo {
-    position: relative;
+    position: absolute;
     margin-top: 20px;
-    width: 70px;
-    height: 45px;
+    width: 60px;
+    height: 52px;
+    right: 25px;
     border-radius: 2px;
     font-weight: 500;
     font-size: 15px;

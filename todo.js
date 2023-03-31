@@ -2,6 +2,7 @@ let addToDoButton = document.getElementById('addToDo');
 let toDoContainer = document.getElementById('toDoContainer');
 let inputField = document.getElementById('inputField');
 
+//event listener where you listen to the load event.
 function onLoadHandler() {
     loadData();
     const headlineElement = document.querySelector("h1");
