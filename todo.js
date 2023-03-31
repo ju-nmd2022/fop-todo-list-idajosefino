@@ -2,12 +2,12 @@ let addToDoButton = document.getElementById('addToDo');
 let toDoContainer = document.getElementById('toDoContainer');
 let inputField = document.getElementById('inputField');
 
-function loadHandler() {
+function onLoadHandler() {
     loadData();
     const headlineElement = document.querySelector("h1");
     const footerElement = document.getElementById("footer");
 }
-window.addEventListener("load", loadHandler);
+window.addEventListener("load", onLoadHandler);
 
 addToDoButton.addEventListener('click', function(){
     var paragraph = document.createElement('p')
@@ -22,29 +22,3 @@ addToDoButton.addEventListener('click', function(){
         toDoContainer.removeChild(paragraph);
     })
 })
-
-// function finishedLoadingHandler(event) {
-//     console.log(event.target);
-//     const request = event.target;
-//     const response = request.response;
-//     const tasks = response.tasks
-    
-//     for (let task of tasks) {
-//         console.log(task.name);
-//     }
-// }
-
-// function loadData() {
-//     const request = new XMLHttpRequest();
-//     request.responseType = "json";
-
-//     const url = "data.json";
-//     const method = "GET";
-//     request.open(method, url);
-//     request.addEventListener("load", finishedLoadingHandler);
-//     request.send();
-// }
-
-// const myArray = [42, 12, 5, 7];
-// const jsonString = JSON.stringify(myArray);
-// localStorage.array = jsonString;
