@@ -5,9 +5,6 @@ let addToDoButton = document.getElementById('addToDo');
 let toDoContainer = document.getElementById('toDoContainer');
 let inputField = document.getElementById('inputField');
 
-//arrays help maintain large sets of data under a single variable name to avoid confusion that can occur when using several variables. 
-let arrayOfTasks;
-
 //local storage
 //length = the length read-only property of the Storage interface returns the number of data items stored in a given storage object.
 //classList and paragraph-styling = javaScript classList is a DOM property of javaScript that allows for styling the CSS classes of an element.
