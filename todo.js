@@ -1,62 +1,16 @@
-// const InputText = document.getElementById('p'); 
-
-// let addToDoButton = document.getElementById('addToDo');
-// let toDoContainer = document.getElementById('toDoContainer');
-// let inputField = document.getElementById('inputField');
-
-// let arrayOfTasks;
-
-// //how to read what is in localStorage
-// for (let i = 0; i < localStorage.length; i++) {
-//     var paragraph = document.createElement('p')
-//     paragraph.classList.add('paragraph-styling')
-//     paragraph.innerText = localStorage.key(i);
-//     toDoContainer.appendChild(paragraph);
-
-//     if (localStorage.getItem(localStorage.key(i)) === 'true') {
-//         paragraph.style.textDecoration = "line-through";
-//     }
-
-//     //when you click the to-do one time a line is drawn over it
-//     paragraph.addEventListener('click', function() {
-//         this.style.textDecoration = "line-through";
-//         localStorage.setItem(this.innerText, true);
-//     })
-//     //when you click twice on the to-do it disappears
-//     paragraph.addEventListener('dblclick', function() {
-//         localStorage.removeItem(this.innerHTML);
-//         toDoContainer.removeChild(this);
-//     })
-// }
-
-// addToDoButton.addEventListener('click', function(){
-//     var paragraph = document.createElement('p')
-//     paragraph.classList.add('paragraph-styling')
-//     paragraph.innerText = inputField.value;
-//     toDoContainer.appendChild(paragraph);
-// //this is to make sure the inputfield is empty ones you have pressed +
-//     inputField.value = "";
-//     localStorage.setItem(paragraph.innerText, false);
-// //when you click the to-do one time a line is drawn over it
-//     paragraph.addEventListener('click', function() {
-//         paragraph.style.textDecoration = "line-through";
-//         localStorage.setItem(paragraph.innerText, true);
-//     })
-// //when you click twice on the to-do it disappears
-//     paragraph.addEventListener('dblclick', function() {
-//         toDoContainer.removeChild(paragraph);
-//         localStorage.removeItem(paragraph.innerText, true);
-//     })
-// })
-
+//the getElementById() method of the document interface returns an element object representing the element whose id property matches the specified string. since element ids are required to be unique if specified, they're a useful way to get access to a specific element quickly.
 const InputText = document.getElementById('p'); 
 
 let addToDoButton = document.getElementById('addToDo');
 let toDoContainer = document.getElementById('toDoContainer');
 let inputField = document.getElementById('inputField');
 
+//arrays help maintain large sets of data under a single variable name to avoid confusion that can occur when using several variables. 
 let arrayOfTasks;
 
+//local storage
+//length = the length read-only property of the Storage interface returns the number of data items stored in a given storage object.
+//classList and paragraph-styling = javaScript classList is a DOM property of javaScript that allows for styling the CSS classes of an element.
 for (let i = 0; i < localStorage.length; i++) {
     var paragraph = document.createElement('p')
     paragraph.classList.add('paragraph-styling')
@@ -67,26 +21,21 @@ for (let i = 0; i < localStorage.length; i++) {
         paragraph.style.textDecoration = "line-through";
     }
 
-    //when you click the to-do one time a line is drawn over it
-    paragraph.addEventListener('click', function(){
+    //when you click the to-do one time a line is drawn over it. "this" is used instead of "paragraph".
+    // when you use this in a click eventListener it means that that is the element you click on.
+    paragraph.addEventListener('click', function() {
         this.style.textDecoration = "line-through";
         localStorage.setItem(this.innerText, true);
     })
-    //when you click twice on the to-do it disappears
-    paragraph.addEventListener('dblclick', function(){
+    //when you click twice on the to-do it disappears.
+    paragraph.addEventListener('dblclick', function() {
         localStorage.removeItem(this.innerHTML);
         toDoContainer.removeChild(this);
     })
+
 }
 
-//event listener where you listen to the load event.
-function onLoadHandler() {
-    const headlineElement = document.querySelector("h1");
-    const footerElement = document.getElementById("footer");
-}
-window.addEventListener("load", onLoadHandler);
-
-addToDoButton.addEventListener('click', function(){
+addToDoButton.addEventListener('click', function() {
     var paragraph = document.createElement('p')
     paragraph.classList.add('paragraph-styling')
     paragraph.innerText = inputField.value;
@@ -105,6 +54,3 @@ addToDoButton.addEventListener('click', function(){
         toDoContainer.removeChild(this);
     })
 })
-
-//need help with understanding how to add the paragraphs you write as to-dos is saved in localstorage and removed by double click...
-//need helo about onLoadHandler cause I am not sure it is working.
