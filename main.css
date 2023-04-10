@@ -1,0 +1,99 @@
+/* // The following 99 lines of code was adapted from https://www.youtube.com/watch?v=WwWX0Y5clZk&list=WL&index=15 and https://www.youtube.com/watch?v=-pRg_daFjfk&list=WL&index=14 Accessed: 2023-03-30 and 2023-03-31 while coloring, footer and overall styling is based on my own personal preferences and what I have learned in the previous course about css. */
+* {
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.headline {
+    color: #905641;
+    margin: auto;
+    top: 70px;
+    padding: 20px 23px;
+    font-size: 28px;
+}
+
+.wrapper {
+    max-width: 600px;
+    padding: 28px 0 30px;
+    margin: 137px auto;
+    background: #F4EEEE;
+    border-radius: 7px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.text {
+    color: #000;
+    font-family: 'Courier New', Courier, monospace;
+    margin: auto;
+    left: 20px;
+    padding: 2px 25px;
+    font-size: 13px;
+}
+
+.task-input {
+    height: 52px;
+    padding: 0 25px;
+    position: relative;
+}
+
+.task-input input{
+    height: 100%;
+    width: 100%;
+    border: 1px solid #fff;
+    font-weight: 500;
+    margin-top: 20px;
+    outline: none;
+    font-size: 14px;
+    padding: 0 20px 0 20px;
+}
+
+.task-input input:focus,
+.task-input input.active{
+  border: 1px solid #905641;
+}
+
+#addToDo {
+    position: absolute;
+    margin-top: 20px;
+    width: 60px;
+    height: 52px;
+    right: 25px;
+    border-radius: 2px;
+    font-weight: 500;
+    font-size: 15px;
+    background: #905641;
+    color: #fff;
+    border: 1px solid #905641;
+    outline: none;
+}
+
+.to-dos {
+    position: relative;
+    left: 20px;
+    margin-top: 40px;
+}
+
+.paragraph-styling {
+    /* margin: 0; */
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+    position: relative;
+    left: 5px;
+    font-size: 17px;
+}
+
+.footer {
+    color: #000;
+    position: relative;
+    left: 20px;
+    font-size: 13px;
+    margin-top: 40px;
+}
